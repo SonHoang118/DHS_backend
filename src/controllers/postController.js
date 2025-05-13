@@ -3,7 +3,7 @@ const Post = require("../models/postModel")
 const postController = {
     getAllPosts: async (req, res) => {
         try {
-            const posts = await Post.find({}, 'title imgTitle slugify createdAt').sort({ createdAt: -1 })
+            const posts = await Post.find({}, 'title imgTitle slugify createdAt imgsId').sort({ createdAt: -1 })
             if (posts) {
                 return res.status(200).json({
                     status: 200,
