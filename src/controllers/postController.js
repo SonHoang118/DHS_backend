@@ -16,7 +16,8 @@ const postController = {
         catch (err) {
             return res.status(500).json({
                 result: 'Error',
-                error: err
+                error: err,
+                msg: "loi ket noi mongo"
             })
         }
     },
